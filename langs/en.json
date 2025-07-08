@@ -6,7 +6,13 @@
       "link1": "Home",
       "link2": "Somfy",
       "link3": "About us",
-      "link4": "Contact"
+      "link4": "Contact",
+      "dropdown": "Categories",
+      "cat1": "curtains manufacturing",
+      "cat2": "fabrics",
+      "cat3": "wallpaper",
+      "cat4": "rug design",
+      "cat5": "furnisher design"
     },
     "about": {
       "sectionTitle": "About us",
