@@ -3,17 +3,19 @@ import { NextResponse } from "next/server";
 
 // Create and configure the Nodemailer transporter with pooling enabled
 const transporter = nodemailer.createTransport({
-  host: "mail.marietta.sa", // Your SMTP server
-  port: 465, // SSL port
+  host: process.env.SMTP_HOST || "mail.marietta.sa", // Your SMTP server
+  port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 465, // SSL port
   secure: true, // SSL enabled for port 465
   auth: {
-    user: "support@marietta.sa", // Your email user
-    pass: "x5#07(wX4cWxTG", // Your email password
+    user: process.env.SMTP_USER || "support@marietta.sa", // Your email user
+    pass: process.env.SMTP_PASS || "x5#07(wX4cWxTG", // Your email password
   },
   pool: true, // Enables pooling
   maxConnections: 5, // Maximum number of connections to re-use
   maxMessages: 100, // Maximum number of messages to send through one connection
   rateLimit: 10, // Number of messages to send per second
+  socketTimeout: 30000, // 30 seconds timeout
+  connectionTimeout: 30000, // 30 seconds timeout
 });
 
 export async function POST(req: Request) {
