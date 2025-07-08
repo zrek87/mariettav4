@@ -133,10 +133,16 @@
       "subtitle": "Any question or remarks? Just write us a message!"
     },
     "contactInfo": {
-      "title": "Contact Information",
-      "phone": "+966-50-446-0636",
+      "title": "Factory Contact Information",
+      "phone": "+966504460636",
       "email": "support@marietta.sa",
-      "address": "Riyadh, Kingdom of Saudi Arabia"
+      "address": "Riyadh, Kingdom of Saudi Arabia",
+      "showroomSection": "Showroom Contact Information",
+      "showroomAddress": "Prince Muhammad Ibn Saad Ibn Abdulaziz Rd, Al Malqa, Riyadh 13525",
+      "showroomAddressMap": "Showroom Location on Google Maps",
+      "showroomWhatsapp": "WhatsApp: +966 11 456 5328",
+      "showroomPhone": "+966559544268",
+      "showroomEmail": "sido@marietta.sa"
     },
     "form": {
       "firstNamePlaceholder": "First Name",
@@ -144,7 +150,13 @@
       "emailPlaceholder": "Email",
       "phonePlaceholder": "Phone Number",
       "messagePlaceholder": "Write your message..",
-      "sendButton": "Send Message"
+      "sendButton": "Send Message",
+      "successMessage": "Your message has been sent successfully!",
+      "errorMessage": "Something went wrong. Please try again.",
+      "networkErrorMessage": "Failed to send message. Please check your connection.",
+      "loadingText": "Processing...",
+      "popupTitle": "Thank You!",
+      "popupCloseButton": "Close"
     }
   },
 
