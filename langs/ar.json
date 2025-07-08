@@ -121,10 +121,16 @@
       "subtitle": "أي سؤال أو ملاحظات؟ فقط اكتب لنا رسالة!"
     },
     "contactInfo": {
-      "title": "معلومات التواصل",
-      "phone": "+966-50-446-0636",
+      "title": "معلومات التواصل المصنع",
+      "phone": "966504460636+",
       "email": "support@marietta.sa",
-      "address": "الرياض، المملكة العربية السعودية"
+      "address": "الرياض، المملكة العربية السعودية",
+      "showroomSection": "معلومات تواصل المعرض",
+      "showroomAddress": "طريق الأمير محمد بن سعد بن عبدالعزيز، الملقا، الرياض 13525",
+      "showroomAddressMap": "موقع المعرض على خرائط جوجل",
+      "showroomWhatsapp": "واتساب: +966 11 456 5328",
+      "showroomPhone": "966559544268+",
+      "showroomEmail": "sido@marietta.sa"
     },
     "form": {
       "firstNamePlaceholder": "الاسم الأول",
@@ -132,7 +138,13 @@
       "emailPlaceholder": "البريد الإلكتروني",
       "phonePlaceholder": "رقم الهاتف",
       "messagePlaceholder": "اكتب رسالتك..",
-      "sendButton": "إرسال الرسالة"
+      "sendButton": "إرسال الرسالة",
+      "successMessage": "تم إرسال رسالتك بنجاح!",
+      "errorMessage": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+      "networkErrorMessage": "فشل إرسال الرسالة. يرجى التحقق من الاتصال.",
+      "loadingText": "جاري المعالجة...",
+      "popupTitle": "شكرًا لك!",
+      "popupCloseButton": "إغلاق"
     }
   },
   "somfyPage": {
