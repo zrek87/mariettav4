@@ -1,0 +1,17 @@
+support@marietta.sa
+x5#07(wX4cWxTG
+
+Hostinger
+1W+Vx0yiIH1%TiZ%=Glo
+
+pm2 start npm --name "marietta.sa" -- run start
+
+
+
+
+cd /home/ahmed/
+
+
+sudo certbot --nginx -d marietta.sa
+
+اريتا
