@@ -1,6 +1,6 @@
 "use client";
 import { Dialog, DialogPanel, Menu, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { HiBars3, HiChevronDown, HiXMark } from "react-icons/hi2";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
@@ -15,12 +15,12 @@ const navigation = [
   { key: "link4", href: "/contact", current: false },
 ];
 
-const categories = [
-  { key: "cat1", href: "/category1" },
-  { key: "cat2", href: "/category2" },
-  { key: "cat3", href: "/category3" },
-    { key: "cat4", href: "/category4" },
-      { key: "cat5", href: "/category5" },
+export const categories = [
+  { key: "cat1", href: "1" },
+  { key: "cat2", href: "2" },
+  { key: "cat3", href: "3" },
+    { key: "cat4", href: "4" },
+      { key: "cat5", href: "5" },
 ];
 
 function classNames(...classes: (string | undefined | null | false)[]): string {
@@ -32,7 +32,7 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
   const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations("homepage.navbar");
-
+const [open, setOpen] = useState(false)
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
       {/* Top Banner */}
@@ -64,7 +64,7 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
     <div className="flex flex-col items-start leading-none pl-2 border-l border-gray-300">
       <p className="text-[10px] md:text-[11px] font-semibold tracking-wider uppercase"
          style={{
-           backgroundImage: 'linear-gradient(to right, #FFD700, #FFA500)', /* Golden yellow to Orange */
+           backgroundImage: 'linear-gradient(to right, #CCAC00, #CC8400)', /* Golden yellow to Orange */
            WebkitBackgroundClip: 'text',
            backgroundClip: 'text',
            WebkitTextFillColor: 'transparent',
@@ -75,7 +75,7 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
       </p>
       <p className="text-[10px] md:text-[11px] font-semibold tracking-wider uppercase mt-0.5"
          style={{
-           backgroundImage: 'linear-gradient(to right, #FFD700, #FFA500)', /* Golden yellow to Orange */
+           backgroundImage: 'linear-gradient(to right, #CCAC00, #CC8400)', /* Golden yellow to Orange */
            WebkitBackgroundClip: 'text',
            backgroundClip: 'text',
            WebkitTextFillColor: 'transparent',
@@ -103,55 +103,62 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
           ))}
 
           {/* Categories Dropdown */}
-          <Menu as="div" className="relative inline-block text-left pb-2">
-            <div>
-              <Menu.Button className="uppercase text-sm font-semibold text-gray-700 hover:text-orange-600 inline-flex items-center gap-1 transition-all duration-300 group">
-                {t("dropdown")}
-                <HiChevronDown className="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" />
-              </Menu.Button>
-            </div>
+ <div
+  className="relative inline-block text-left pb-2"
+  onMouseEnter={() => setOpen(true)}
+  onMouseLeave={() => setOpen(false)}
+>
+  <Menu as="div" className="relative inline-block text-left">
+    <div>
+      <Menu.Button className="uppercase text-sm font-semibold text-gray-700 hover:text-orange-600 inline-flex items-center gap-1 transition-all duration-300 group">
+        {t("dropdown")}
+        <HiChevronDown className="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" />
+      </Menu.Button>
+    </div>
 
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-300"
-              enterFrom="opacity-0 translate-y-2 scale-95"
-              enterTo="opacity-100 translate-y-0 scale-100"
-              leave="transition ease-in duration-200"
-              leaveFrom="opacity-100 translate-y-0 scale-100"
-              leaveTo="opacity-0 translate-y-2 scale-95"
-            >
-              <Menu.Items className="absolute z-20 w-64 origin-top-right rounded-2xl bg-white backdrop-blur-xl shadow-2xl ring-1 ring-gray-200/50 focus:outline-none transform-gpu animate-fade-in-up p-2">
-                <div className="space-y-1">
-                  {categories.map((cat) => (
-                    <Menu.Item key={cat.key}>
-                      {({ active }) => (
-                        <Link
-                          href={cat.href}
-                          className={classNames(
-                            "flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-[1.02]",
-                            active
-                              ? "bg-gradient-to-br from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/40"
-                              : "text-gray-800 hover:bg-gray-100 hover:text-gray-900"
-                          )}
-                        >
-                          <span className={classNames(
-                            "flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold",
-                            active ? "bg-white/30 border border-white/50" : "bg-gray-200 text-gray-600"
-                          )}>
-                            {/* You can replace this with a proper icon component like Heroicons */}
-                            {cat.key.slice(-1)}
-                          </span>
-                          <span className="text-sm font-medium">{t(cat.key)}</span>
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  ))}
-                </div>
-              </Menu.Items>
-            </Transition>
-          </Menu>
+    <Transition
+      show={open}
+      as="div"
+      enter="transition ease-out duration-300"
+      enterFrom="opacity-0 translate-y-2 scale-95"
+      enterTo="opacity-100 translate-y-0 scale-100"
+      leave="transition ease-in duration-200"
+      leaveFrom="opacity-100 translate-y-0 scale-100"
+      leaveTo="opacity-0 translate-y-2 scale-95"
+    >
+      <Menu.Items className="absolute z-20 w-64 origin-top-right rounded-2xl bg-white backdrop-blur-xl shadow-2xl ring-1 ring-gray-200/50 focus:outline-none transform-gpu animate-fade-in-up p-2">
+        <div className="space-y-1">
+          {categories.map((cat) => (
+            <Menu.Item key={cat.key} as="div">
+              {({ active }) => (
+                <Link
+                   href={`/categories/${cat.href}`}
+                  className={classNames(
+                    "flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-[1.02]",
+                    active
+                      ? "bg-[#E58411] text-white shadow-lg shadow-[#E58411]/40"
+                      : "text-gray-800 hover:bg-gray-100 hover:text-gray-900"
+                  )}
+                >
+                  <span className={classNames(
+                    "flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold",
+                    active ? "bg-white/30 border border-white/50" : "bg-gray-200 text-gray-600"
+                  )}>
+                    {cat.key.slice(-1)}
+                  </span>
+                  <span className="text-sm font-medium">{t(cat.key)}</span>
+                </Link>
+              )}
+            </Menu.Item>
+          ))}
         </div>
+      </Menu.Items>
+    </Transition>
+  </Menu>
 </div>
+
+        </div>
+        </div>
         {/* Language Switcher */}
         <div className="hidden lg:flex">
       <Link
