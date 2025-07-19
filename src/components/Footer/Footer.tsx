@@ -1,11 +1,12 @@
+"use client"
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { FooterLinks } from "./Footerdata";
-
+import { categories } from "../Navibar/Navibar";
 export default function Footer(): JSX.Element {
   const t = useTranslations("homepage.footer");
-
+  const t2 = useTranslations("homepage.navbar");
   return (
     <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -46,13 +47,13 @@ export default function Footer(): JSX.Element {
               {t("helpTitle")}
             </p>
             <ul className="mt-6 space-y-4">
-              {FooterLinks.products.map((link, index) => (
+              {categories.map((cat,index) => (
                 <li key={index}>
                   <Link
-                    href={link.href}
+                  href={`/categories/${cat.href}`}
                     className="flex text-base text-black transition-all duration-200 hover:text-mar focus:text-mar"
                   >
-                    {t(`links.products.${index}`)}
+                    {t2(cat.key)}
                   </Link>
                 </li>
               ))}
