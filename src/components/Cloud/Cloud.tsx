@@ -1,14 +1,21 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
 const images = [
-  "/logos/1.png",
-  "/logos/2.png",
-  "/logos/3.png",
-  "/logos/4.png",
-  "/logos/5.png",
-  "/logos/6.png",
-  "/logos/7.png",
-  "/logos/8.png",
+  "/partners/1.png",
+  "/partners/2.png",
+  "/partners/3.png",
+  "/partners/4.png",
+  "/partners/5.png",
+  "/partners/6.png",
+  "/partners/7.jpg",
+  "/partners/8.png",
+  "/partners/9.png",
+  "/partners/10.webp",
+  "/partners/12.png",
+  "/partners/13.png",
+  "/partners/14.png",
+  "/partners/15.png",
 ];
 
 const Cloud = () => {
@@ -22,15 +29,15 @@ const Cloud = () => {
           </h2>
         </div>
 
-        <div className="grid items-center max-w-4xl grid-cols-2 mx-auto mt-12 md:mt-20 md:grid-cols-3 gap-x-10 gap-y-16">
+        <div className="grid items-center max-w-6xl grid-cols-2 mx-auto mt-12 md:mt-20 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-16">
           {images.map((src, index) => (
-            <div key={index}>
+            <div key={index} className="flex items-center justify-center">
               <Image
-                className="object-contain w-full h-12 mx-auto"
+                className="object-contain w-full h-12 mx-auto transition-transform duration-300 hover:scale-110"
                 src={src}
                 width={500}
                 height={500}
-                alt={`Logo ${index + 1}`}
+                alt={`Partner logo ${index + 1}`}
               />
             </div>
           ))}

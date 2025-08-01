@@ -1,20 +1,20 @@
-import Image from 'next/image';
+import Image from "next/image";
 import backgroundImage from "../../../../../public/images/banner.jpg";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import Stats from '@/components/Stats/Stats';
-import Cloud from '@/components/Cloud/Cloud';
-import Zoom from '@/components/Zoom/Zoom';
-import Content from '@/components/Content/Content';
-import { useTranslations } from 'next-intl';
+import Stats from "@/components/Stats/Stats";
+import Cloud from "@/components/Cloud/Cloud";
+import Zoom from "@/components/Zoom/Zoom";
+import Content from "@/components/Content/Content";
+import { useTranslations } from "next-intl";
 
 export default function Page() {
-  const t = useTranslations('homepage.aboutPage');
+  const t = useTranslations("homepage.aboutPage");
   const slogans: string[] = [
     t("slogan1"),
     t("slogan2"),
     t("slogan3"),
     t("slogan4"),
-    t("slogan5")
+    t("slogan5"),
   ];
 
   return (
@@ -45,35 +45,35 @@ export default function Page() {
           <div className="relative md:w-1/2 flex justify-center md:justify-end mb-24 md:mb-0">
             <div className="relative w-72 h-96 md:w-80 md:h-[26rem] lg:w-96 lg:h-[28rem]">
               <Image
-                src="/images/c1.jpg"
+                src="/images/sido-5.jpg"
                 alt="Living Room"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg shadow-lg"
+                fill
+                className="rounded-lg shadow-lg object-fill"
               />
             </div>
             <div className="absolute bottom-0 left-12 rtl:right-12 w-48 h-64 md:w-52 md:h-72 lg:w-56 lg:h-80 transform translate-y-1/4 md:translate-y-1/3 shadow-lg">
               <Image
-                src="/images/s7.jpg"
+                src="/images/sido-6.png"
                 alt="Door"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-fill"
               />
             </div>
           </div>
 
           <div className="md:w-1/2 flex flex-col space-y-5">
-            <h2 className="text-mar font-semibold text-xl">{t("sectionLabel")}</h2>
-            <h1 className="text-4xl font-semibold text-gray-800">{t("title")}</h1>
-            <p className="text-gray-500 font-semibold">
-              {t("description")}
-            </p>
+            <h2 className="text-mar font-semibold text-xl">
+              {t("sectionLabel")}
+            </h2>
+            <h1 className="text-4xl font-semibold text-gray-800">
+              {t("title")}
+            </h1>
+            <p className="text-gray-500 font-semibold">{t("description")}</p>
 
             <ul className="space-y-2">
               {slogans.map((slogan, index) => (
                 <li key={index} className="flex items-center">
-                  <BsFillCheckCircleFill className='text-yellow-500 text-lg mr-2' />
+                  <BsFillCheckCircleFill className="text-yellow-500 text-lg mr-2" />
                   <span className="text-gray-700">{slogan}</span>
                 </li>
               ))}

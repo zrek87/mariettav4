@@ -11,47 +11,51 @@ export default function Logos(): JSX.Element {
     const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) return;
 
+    let animationId: number;
     let scrollPosition = 0;
-    const scrollSpeed = 1; // pixels per frame
-    const scrollInterval = 30; // milliseconds between scroll updates
+    const scrollSpeed = 0.5; // pixels per frame for smoother movement
 
-    const autoScroll = () => {
-      if (scrollContainer) {
-        scrollPosition += scrollSpeed;
+    const animateScroll = () => {
+      scrollPosition += scrollSpeed;
 
-        // Reset to beginning when reaching the end
-        if (
-          scrollPosition >=
-          scrollContainer.scrollWidth - scrollContainer.clientWidth
-        ) {
-          scrollPosition = 0;
-        }
-
-        scrollContainer.scrollLeft = scrollPosition;
+      // Reset to beginning when reaching the end
+      if (
+        scrollPosition >=
+        scrollContainer.scrollWidth - scrollContainer.clientWidth
+      ) {
+        scrollPosition = 0;
       }
+
+      scrollContainer.scrollLeft = scrollPosition;
+      animationId = requestAnimationFrame(animateScroll);
     };
 
-    const intervalId = setInterval(autoScroll, scrollInterval);
+    animationId = requestAnimationFrame(animateScroll);
 
     // Pause auto-scroll on hover
-    const handleMouseEnter = () => clearInterval(intervalId);
+    const handleMouseEnter = () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
     const handleMouseLeave = () => {
-      const newIntervalId = setInterval(autoScroll, scrollInterval);
-      return () => clearInterval(newIntervalId);
+      animationId = requestAnimationFrame(animateScroll);
     };
 
     scrollContainer.addEventListener("mouseenter", handleMouseEnter);
     scrollContainer.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      clearInterval(intervalId);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
       scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
       scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
   return (
-    <div className="bg-white py-8">
+    <div className="bg-white py-12">
       <div className="mx-auto max-w-6xl px-4 lg:px-12">
         {/* Horizontal scrollable container */}
         <div className="relative">

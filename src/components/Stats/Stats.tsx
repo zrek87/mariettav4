@@ -1,16 +1,16 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Counter } from '@/hooks/Counter';
+import { Counter } from "@/hooks/Counter";
 
 const Stats = () => {
   const t = useTranslations("homepage.stats");
 
   const stats = [
-    { id: 1, countTo: 50, suffix: '+', label: t("successfulProjects") },
-    { id: 2, countTo: 6, prefix: '+', suffix: '', label: t("yearsInMarket") },
-    { id: 3, countTo: 10, suffix: '+', label: t("partners") },
-    { id: 4, countTo: 16, suffix: '+', label: t("citiesSupport") },
+    { id: 1, countTo: 1000, suffix: "+", label: t("successfulProjects") },
+    { id: 2, countTo: 15, prefix: "+", suffix: "", label: t("yearsInMarket") },
+    { id: 3, countTo: 25, suffix: "+", label: t("partners") },
+    { id: 4, countTo: 10, suffix: "+", label: t("citiesSupport") },
   ];
 
   return (
@@ -27,7 +27,9 @@ const Stats = () => {
                     {count}
                     {stat.suffix}
                   </h3>
-                  <p className="text-base font-medium leading-7 text-center text-mar">{stat.label}</p>
+                  <p className="text-base font-medium leading-7 text-center text-mar">
+                    {stat.label}
+                  </p>
                 </div>
               );
             })}
