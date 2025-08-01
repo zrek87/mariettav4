@@ -71,7 +71,7 @@ export default function Footer(): JSX.Element {
                   className="mb-2 flex sm:flex-row flex-col items-center text-black justify-center gap-3 md:justify-start hover:text-mar"
                 >
                   {link.icon && <span className="text-xl">{link.icon}</span>}
-                  <a href={link.href} className="">
+                  <a href={link.href} target="_blank" className="">
                     {t(`links.followUs.${index}`)}
                   </a>
                 </li>
