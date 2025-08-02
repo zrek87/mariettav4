@@ -96,16 +96,15 @@ const Navibar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:gap-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className="uppercase text-sm font-semibold pb-2 text-gray-700 hover:text-orange-600 transition-all duration-300 relative group"
-              >
-                {t(item.key)}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </Link>
-            ))}
+            {/* Home Link */}
+            <Link
+              key="link1"
+              href="/"
+              className="uppercase text-sm font-semibold pb-2 text-gray-700 hover:text-orange-600 transition-all duration-300 relative group"
+            >
+              {t("link1")}
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </Link>
 
             {/* Categories Dropdown */}
             <div
@@ -170,6 +169,18 @@ const Navibar = () => {
                 </Transition>
               </Menu>
             </div>
+
+            {/* Other Navigation Links */}
+            {navigation.slice(1).map((item) => (
+              <Link
+                key={item.key}
+                href={item.href}
+                className="uppercase text-sm font-semibold pb-2 text-gray-700 hover:text-orange-600 transition-all duration-300 relative group"
+              >
+                {t(item.key)}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            ))}
           </div>
         </div>
         {/* Language Switcher */}

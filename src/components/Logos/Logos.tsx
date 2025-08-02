@@ -1,91 +1,73 @@
 "use client";
 
 import Image from "next/image";
-import { Logoslist } from "./Logoslist";
-import { useEffect, useRef } from "react";
+import { Logoslist, type LogoItem } from "./Logoslist";
+import { useMemo } from "react";
 
-export default function Logos(): JSX.Element {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+interface LogosProps {
+  direction?: "ltr" | "rtl";
+  speed?: number; // Animation duration in seconds
+}
 
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
+export default function Logos({
+  direction = "ltr",
+  speed = 20,
+}: LogosProps): JSX.Element {
+  // Memoize duplicated logos to prevent recreation on every render
+  const duplicatedLogos = useMemo(() => [...Logoslist, ...Logoslist], []);
 
-    let animationId: number;
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5; // pixels per frame for smoother movement
-
-    const animateScroll = () => {
-      scrollPosition += scrollSpeed;
-
-      // Reset to beginning when reaching the end
-      if (
-        scrollPosition >=
-        scrollContainer.scrollWidth - scrollContainer.clientWidth
-      ) {
-        scrollPosition = 0;
-      }
-
-      scrollContainer.scrollLeft = scrollPosition;
-      animationId = requestAnimationFrame(animateScroll);
-    };
-
-    animationId = requestAnimationFrame(animateScroll);
-
-    // Pause auto-scroll on hover
-    const handleMouseEnter = () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-    const handleMouseLeave = () => {
-      animationId = requestAnimationFrame(animateScroll);
-    };
-
-    scrollContainer.addEventListener("mouseenter", handleMouseEnter);
-    scrollContainer.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-      scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
-      scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
+  const animationClass =
+    direction === "rtl" ? "animate-logo-scroll-rtl" : "animate-logo-scroll";
 
   return (
-    <div className="bg-white py-12">
+    <section
+      className="bg-white py-12"
+      aria-label="Partner logos"
+      role="region"
+    >
       <div className="mx-auto max-w-6xl px-4 lg:px-12">
-        {/* Horizontal scrollable container */}
-        <div className="relative">
-          {/* Gradient overlay for smooth fade effect */}
-          <div className="absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
-          <div className="absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
-
-          {/* Scrollable logos container */}
+        {/* Horizontal scrolling container */}
+        <div className="relative overflow-hidden">
+          {/* Gradient overlays for fade effect */}
           <div
-            ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto scrollbar-hide"
+            className="absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-white to-transparent pointer-events-none"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-white to-transparent pointer-events-none"
+            aria-hidden="true"
+          />
+
+          {/* Infinite scrolling logos */}
+          <div
+            className={`flex gap-8 ${animationClass}`}
+            style={
+              { "--animation-duration": `${speed}s` } as React.CSSProperties
+            }
+            aria-live="polite"
+            aria-label={`Scrolling partner logos ${
+              direction === "rtl" ? "right to left" : "left to right"
+            }`}
           >
-            {Logoslist.map((pl) => (
+            {duplicatedLogos.map((logo: LogoItem, index: number) => (
               <div
-                key={pl.path}
+                key={`${logo.path}-${index}`}
                 className="flex-shrink-0 flex items-center justify-center"
               >
                 <Image
-                  className="h-12 w-auto object-contain transition duration-300 hover:scale-105"
-                  src={pl.path}
-                  alt={pl.alt}
+                  className="h-12 w-auto object-contain transition duration-300 hover:scale-105 focus:scale-105"
+                  src={logo.path}
+                  alt={logo.alt}
                   width={158}
                   height={48}
                   loading="lazy"
+                  title={logo.name}
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
