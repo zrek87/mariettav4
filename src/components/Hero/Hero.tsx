@@ -16,7 +16,7 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      src: "/images/s1.jpg",
+      src: "/images/sido-12.png",
       alt: "Slide 1",
       title: t("slide1.title"),
       description: t("slide1.description"),

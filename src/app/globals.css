@@ -20,11 +20,51 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
+
+  /* Logo scroll animations */
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes logo-scroll-rtl {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-logo-scroll {
+    animation: logo-scroll var(--animation-duration, 60s) linear infinite;
+  }
+
+  .animate-logo-scroll-rtl {
+    animation: logo-scroll-rtl var(--animation-duration, 10s) linear infinite;
+  }
+
+  .animate-logo-scroll:hover,
+  .animate-logo-scroll-rtl:hover {
+    animation-play-state: paused;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-logo-scroll,
+    .animate-logo-scroll-rtl {
+      animation: none;
+    }
+  }
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
 }
 
 html {
@@ -34,7 +74,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }

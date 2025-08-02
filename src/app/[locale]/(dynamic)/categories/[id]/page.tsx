@@ -45,7 +45,7 @@ const products = [
     images: [
       "/images/categoreisImages/curtains/3.jpeg",
       "/images/categoreisImages/curtains/1.jpeg",
-      "/images/categoreisImages/curtains/3.jpeg",
+      "/images/categoreisImages/curtains/2.jpeg",
     ],
   },
   {
@@ -55,7 +55,7 @@ const products = [
     images: [
       "/images/categoreisImages/fabrics/3.jpeg",
       "/images/categoreisImages/fabrics/1.jpeg",
-      "/images/categoreisImages/fabrics/3.jpeg",
+      "/images/categoreisImages/fabrics/2.jpeg",
     ],
   },
   {
@@ -90,12 +90,14 @@ const products = [
   },
   {
     id: "5",
-    title: "details.rug.title",
-    description: "details.rug.description",
+    title: "details.furniture.title",
+    description: "details.furniture.description",
     images: [
-      "/images/categoreisImages/furnitire/2.jpeg",
-      "/images/categoreisImages/furnitire/1.jpeg",
-      "/images/categoreisImages/furnitire/3.jpeg",
+      "/images/categoreisImages/furnitire/2.jpg",
+      "/images/categoreisImages/furnitire/1.jpg",
+      "/images/categoreisImages/furnitire/3.png",
+      "/images/categoreisImages/furnitire/4.jpg",
+      "/images/categoreisImages/furnitire/5.jpg",
     ],
   },
 ];

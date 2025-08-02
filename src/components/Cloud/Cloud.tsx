@@ -16,6 +16,13 @@ const images = [
   "/partners/13.png",
   "/partners/14.png",
   "/partners/15.png",
+  "/partners/16.svg",
+  "/partners/17.png",
+  "/partners/18.png",
+  "/partners/19.png",
+  "/partners/20.png",
+  "/partners/21.png",
+  "/partners/22.png",
 ];
 
 const Cloud = () => {
