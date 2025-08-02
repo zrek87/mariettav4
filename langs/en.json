@@ -218,6 +218,28 @@
     "title2": "Wooden Blinds",
     "description2": "Discover the new of our decor",
     "title3": "Fabric collection",
-    "description3": "Elegant Blinds for Any Room"
+    "description3": "Elegant Blinds for Any Room",
+    "details": { 
+       "curtains" : {
+          "title": "Precision-Crafted Curtain Manufacturing",
+           "description": "At Marietta, we specialize in custom curtain manufacturing using advanced tailoring techniques and premium-grade fabrics. Whether for residential, commercial, or hospitality projects, our in-house production ensures unmatched quality, consistency, and attention to detail at every stage."
+       },
+        "fabrics" : {
+          "title": "Premium Fabrics for Every Style",
+          "description": "Discover a wide selection of high-quality fabrics sourced from top international mills. Whether you're looking for light sheers, rich velvets, textured linens, or blackout weaves — we offer materials that elevate any space. Perfect for curtains, upholstery, and custom interior projects."
+       },
+        "Wallpapers" : {
+          "title": "Stylish Wallpapers to Elevate Your Walls",
+          "description": "Add personality and depth to your space with our exclusive wallpaper collection. From subtle textures to bold prints, our wallpapers are designed to complement your curtains and furniture perfectly. Choose from modern geometrics, classic florals, minimalist patterns, and more — all easy to install and built to last."
+       },
+        "rug" : {
+          "title": "Rugs That Ground Your Space in Style",
+          "description": "Discover our curated collection of high-quality rugs designed to bring warmth, texture, and personality to any room. From minimalist neutrals to bold statement pieces, our rugs are crafted for comfort and durability — perfect for living rooms, bedrooms, offices, and more."
+       },
+       "furniture " : {
+          "title": "Inspired Furniture Designs for Modern Living",
+          "description": "Our furniture designs blend style, function, and comfort to suit every lifestyle. From sleek contemporary lines to timeless classic forms, each piece is thoughtfully created to elevate your living space. Whether you’re furnishing a new home or refreshing a single room, our collections help you design with confidence."
+       }
+    }
   }
 }
