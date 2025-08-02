@@ -26,19 +26,16 @@ const contactSchema = z.object({
 // Create and configure the Nodemailer transporter with pooling enabled
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "mail.marietta.sa",
-  port: parseInt(process.env.SMTP_PORT || "465"),
-  secure: true, // Use SSL for port 465 (faster than STARTTLS)
+  port: parseInt(process.env.SMTP_PORT || "587"),
+  secure: false, // Use STARTTLS for port 587
   auth: {
     user: process.env.SMTP_USER || "support@marietta.sa",
     pass: process.env.SMTP_PASS || "",
   },
   pool: true, // Enables pooling
-  maxConnections: 10, // Increased for better performance
-  maxMessages: 200, // Increased for better performance
-  rateLimit: 20, // Increased rate limit
-  connectionTimeout: 60000, // 60 seconds connection timeout
-  greetingTimeout: 30000, // 30 seconds greeting timeout
-  socketTimeout: 60000, // 60 seconds socket timeout
+  maxConnections: 5, // Maximum number of connections to re-use
+  maxMessages: 100, // Maximum number of messages to send through one connection
+  rateLimit: 10, // Number of messages to send per second
 });
 
 export async function POST(req: Request) {
@@ -129,8 +126,19 @@ export async function POST(req: Request) {
 
     // Handle email sending errors
     if (error instanceof Error) {
+      console.error("Email sending error details:", {
+        message: error.message,
+        stack: error.stack,
+        code: (error as any).code,
+        command: (error as any).command,
+      });
+
       return NextResponse.json(
-        { error: "Failed to send email. Please try again later." },
+        {
+          error: "Failed to send email. Please try again later.",
+          details:
+            process.env.NODE_ENV === "development" ? error.message : undefined,
+        },
         { status: 500 }
       );
     }
