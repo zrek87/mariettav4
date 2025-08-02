@@ -6,11 +6,19 @@ import { Categories } from "@/components/Categories/Categories";
 import Somficate from "@/components/Somficate/Somficate";
 import Features from "@/components/Features/Features";
 
-export default function Home() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Home({ params }: PageProps) {
+  const { locale } = await params;
+  // Use RTL only for Arabic, LTR for all other languages
+  const direction = locale === "ar" ? "rtl" : "ltr";
+
   return (
     <main className="bg-white">
       <Hero />
-      <Logos />
+      <Logos direction={direction} />
       <section className="mt-10 mb-10">
         <Categories />
       </section>

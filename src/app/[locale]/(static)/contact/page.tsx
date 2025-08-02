@@ -219,6 +219,20 @@ const Page = () => {
             </div>
             <div className="flex items-center gap-4 group">
               <div className="p-2 bg-[#fab700] bg-opacity-20 rounded-full group-hover:bg-opacity-30 transition-all duration-300">
+                <FaPhoneAlt
+                  className="text-xl text-[#fab700]"
+                  aria-hidden="true"
+                />
+              </div>
+              <a
+                href={`tel:${t("contactInfo.phone2")}`}
+                className="hover:underline hover:text-[#fab700] transition-colors duration-300"
+              >
+                {t("contactInfo.phone2")}
+              </a>
+            </div>
+            <div className="flex items-center gap-4 group">
+              <div className="p-2 bg-[#fab700] bg-opacity-20 rounded-full group-hover:bg-opacity-30 transition-all duration-300">
                 <FaEnvelope
                   className="text-xl text-[#fab700]"
                   aria-hidden="true"
