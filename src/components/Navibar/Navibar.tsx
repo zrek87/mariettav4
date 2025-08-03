@@ -267,7 +267,7 @@ const Navibar = () => {
                 {categories.map((cat) => (
                   <Link
                     key={cat.key}
-                    href={cat.href}
+                    href={`/categories/${cat.href}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 rounded-md px-3 py-2 text-base text-gray-700 hover:bg-orange-50 hover:text-orange-700 transition-colors duration-200"
                   >
