@@ -49,7 +49,6 @@ interface CategoryCardProps {
 function CategoryCard({
   image,
   title,
-  description,
   isMain,
 }: CategoryCardProps): JSX.Element {
   return (

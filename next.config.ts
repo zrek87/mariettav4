@@ -4,9 +4,10 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Disable ESLint for build
+  // eslint: {
+  //   ignoreDuringBuilds: true,
+  // },
 };
 
 export default withNextIntl(nextConfig);

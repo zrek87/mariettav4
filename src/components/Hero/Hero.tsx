@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
@@ -13,35 +13,38 @@ const Hero = () => {
   const locale = useLocale();
   const isRTL = locale === "ar";
 
-  const slides = [
-    {
-      id: 1,
-      src: "/images/sido-12.png",
-      alt: "Slide 1",
-      title: t("slide1.title"),
-      description: t("slide1.description"),
-      buttonText: t("slide1.buttonText"),
-      buttonhref: "/aboutus",
-    },
-    {
-      id: 2,
-      src: "/images/s8.jpg",
-      alt: "Slide 2",
-      title: t("slide2.title"),
-      description: t("slide2.description"),
-      buttonText: t("slide2.buttonText"),
-      buttonhref: "/somfy",
-    },
-    {
-      id: 3,
-      src: "/images/s5.jpeg",
-      alt: "Slide 3",
-      title: t("slide3.title"),
-      description: t("slide3.description"),
-      buttonText: t("slide3.buttonText"),
-      buttonhref: "/contact",
-    },
-  ];
+  const slides = useMemo(
+    () => [
+      {
+        id: 1,
+        src: "/images/sido-12.png",
+        alt: "Slide 1",
+        title: t("slide1.title"),
+        description: t("slide1.description"),
+        buttonText: t("slide1.buttonText"),
+        buttonhref: "/aboutus",
+      },
+      {
+        id: 2,
+        src: "/images/s8.jpg",
+        alt: "Slide 2",
+        title: t("slide2.title"),
+        description: t("slide2.description"),
+        buttonText: t("slide2.buttonText"),
+        buttonhref: "/somfy",
+      },
+      {
+        id: 3,
+        src: "/images/s5.jpeg",
+        alt: "Slide 3",
+        title: t("slide3.title"),
+        description: t("slide3.description"),
+        buttonText: t("slide3.buttonText"),
+        buttonhref: "/contact",
+      },
+    ],
+    [t]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
