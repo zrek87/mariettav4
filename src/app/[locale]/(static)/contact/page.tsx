@@ -143,7 +143,7 @@ const Page = () => {
         setIsSuccess(false);
         setIsPopupVisible(true);
       }
-    } catch (error) {
+    } catch {
       setResponseMessage(t("form.networkErrorMessage"));
       setIsSuccess(false);
       setIsPopupVisible(true);

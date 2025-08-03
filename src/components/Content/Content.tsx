@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Content() {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
-  const t = useTranslations('homepage.content');
+  const t = useTranslations("homepage.content");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,19 +20,23 @@ export default function Content() {
         threshold: 0.2,
       }
     );
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
 
   return (
-    <div ref={ref} className="sm:mt-14 mt-0 relative w-full h-[100vh] overflow-hidden">
+    <div
+      ref={ref}
+      className="sm:mt-14 mt-0 relative w-full h-[100vh] overflow-hidden"
+    >
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/c1.jpg')" }}
@@ -57,14 +61,16 @@ export default function Content() {
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="sm:text-5xl text-2xl font-bold text-white">{t('missionTitle')}</h2>
+        <h2 className="sm:text-5xl text-2xl font-bold text-white">
+          {t("missionTitle")}
+        </h2>
         <motion.p
           className="text-xs font-semibold sm:text-lg max-w-md"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          {t('missionText')}
+          {t("missionText")}
         </motion.p>
 
         <motion.div
@@ -89,14 +95,16 @@ export default function Content() {
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="sm:text-5xl text-2xl font-bold text-white">{t('visionTitle')}</h2>
+        <h2 className="sm:text-5xl text-2xl font-bold text-white">
+          {t("visionTitle")}
+        </h2>
         <motion.p
           className="text-xs font-semibold sm:text-lg max-w-md"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          {t('visionText')}
+          {t("visionText")}
         </motion.p>
 
         <motion.div
