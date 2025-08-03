@@ -65,7 +65,7 @@ const Navibar = () => {
               />
               <div className="flex flex-col items-start leading-none pl-2 border-l border-gray-300">
                 <p
-                  className="text-[10px] md:text-[11px] font-semibold tracking-wider uppercase"
+                  className="text-[11px] md:text-[12px] font-semibold tracking-wider uppercase leading-tight"
                   style={{
                     backgroundImage:
                       "linear-gradient(to right, #CCAC00, #CC8400)" /* Golden yellow to Orange */,
@@ -75,10 +75,10 @@ const Navibar = () => {
                     color: "transparent" /* Fallback */,
                   }}
                 >
-                  Fabrics, Curtains, Wallpaper
+                  {t("logoLine1")}
                 </p>
                 <p
-                  className="text-[10px] md:text-[11px] font-semibold tracking-wider uppercase mt-0.5"
+                  className="text-[10px] md:text-[11px] font-semibold tracking-wider uppercase mt-0.5 leading-tight"
                   style={{
                     backgroundImage:
                       "linear-gradient(to right, #CCAC00, #CC8400)" /* Golden yellow to Orange */,
@@ -88,7 +88,7 @@ const Navibar = () => {
                     color: "transparent" /* Fallback */,
                   }}
                 >
-                  Design & More
+                  {t("logoLine2")}
                 </p>
               </div>
             </Link>
