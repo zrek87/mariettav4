@@ -71,8 +71,7 @@ export default function Blinds({ params }: PageProps) {
             <Image
               src={blindsInfo.background}
               alt="Roller Blinds"
-              layout="fill"
-              objectFit="cover"
+              fill
               className="absolute inset-0 object-cover"
             />
             <motion.div

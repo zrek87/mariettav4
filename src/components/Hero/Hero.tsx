@@ -74,9 +74,8 @@ const Hero = () => {
               <Image
                 src={slide.src}
                 alt={slide.alt}
-                layout="fill"
-                objectFit="cover"
-                className="transition-opacity duration-1000"
+                fill
+                className="transition-opacity duration-1000 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black opacity-70 z-10" />
             </div>
