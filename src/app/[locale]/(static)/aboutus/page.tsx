@@ -24,8 +24,8 @@ export default function Page() {
           <Image
             src={backgroundImage}
             alt="Background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             quality={100}
           />
         </div>

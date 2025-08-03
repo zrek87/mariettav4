@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from '@/i18n/routing';
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 interface ProductcardProps {
@@ -26,9 +26,8 @@ const Productcard = ({
           <Image
             src={imageUrl}
             alt={title}
-            layout="fill"
-            objectFit="cover"
-            className="group-hover:scale-105"
+            fill
+            className="group-hover:scale-105 object-cover"
             loading="lazy"
           />
         </div>
