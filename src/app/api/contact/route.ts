@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   secure: true, // SSL enabled for port 465
   auth: {
     user: "support@marietta.sa", // Your email user
-    pass: "x5#07(wX4cWxTG", // Your email password
+    pass: "Ame19850228@", // Your email password
   },
   pool: true, // Enables pooling
   maxConnections: 5, // Maximum number of connections to re-use
