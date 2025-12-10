@@ -1,0 +1,248 @@
+{
+  "homepage": {
+    "navbar": {
+      "strongTop": "Marietta ",
+      "normalTop": "Elegance in every space.",
+      "link1": "Home",
+      "link2": "Somfy",
+      "link3": "About us",
+      "link4": "Contact",
+      "dropdown": "Categories",
+      "cat1": "Curtains Manufacturing",
+      "cat2": "Fabrics",
+      "cat3": "Wallpaper",
+      "cat4": "Rug Design",
+      "cat5": "Design",
+      "logoLine1": "Fabrics, Curtains, Wallpaper",
+      "logoLine2": "Design & More"
+    },
+    "about": {
+      "sectionTitle": "About us",
+      "heading": "Fantastic Range Of Styles",
+      "paragraph1": "Marietta is a company specializing in providing comprehensive and advanced solutions in the field of curtains. Through our products and services, we aim to enhance the quality of life by offering comfort and elegance in various spaces, including apartments, offices, showrooms, and hospitals.",
+      "paragraph2": "We take pride in our partnership with the global Somfy agency and other leading agencies, allowing us to offer a wide range of products that meet the diverse needs and aspirations of our clients.",
+      "moreInfo": "More info →"
+    },
+
+    "Cloud": {
+      "Titlecloud": "Honored to earn the trust of our partners. "
+    },
+
+    "content": {
+      "missionTitle": "Our Mission",
+      "missionText": "To deliver innovative, high-quality curtains and motors solutions that enhance comfort and elegance, exceed client expectations, and meet diverse needs with modern efficiency.",
+      "visionTitle": "Our Vision",
+      "visionText": "To be the top choice for curtains and motors by offering innovative, high-quality products and exceptional service, setting industry standards for elegance, technology, comfort, and style."
+    },
+
+    "features": {
+      "highlightText": "Now more options in our store.",
+      "title": "We take care of your curtains and home design.",
+      "buttonText": "Browse blinds"
+    },
+
+    "footer": {
+      "companyDescription": "lead in curtains and motors with innovation, quality, and style, setting industry standards and enhancing spaces with elegance and comfort.",
+      "aboutTitle": "About",
+      "helpTitle": "Categories",
+      "followUsTitle": "Follow us",
+      "links": {
+        "company": ["Home", "About Us", "Contact Us"],
+        "products": ["Somfy", "Products", "All"],
+        "followUs": ["Instagram", "TikTok", "LinkedIn", "Facebook"]
+      },
+      "copyright": "Copyright © 2024 Marietta"
+    },
+
+    "hero": {
+      "slide1": {
+        "title": "Welcome to Our Service",
+        "description": "Providing exceptional value and quality.",
+        "buttonText": "Learn More"
+      },
+      "slide2": {
+        "title": "Discover Amazing Somfy solutions",
+        "description": "Enjoy the silent and smooth operation.",
+        "buttonText": "Explore Now"
+      },
+      "slide3": {
+        "title": "Get in Touch ",
+        "description": "We’re here to assist you",
+        "buttonText": "Contact Us"
+      }
+    },
+    "products": {
+      "title": "Top-selling products",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "btntext": "Discover products"
+    },
+
+    "categories": {
+      "catTitle": "Curtains Categories",
+      "catSecond": "Explore our selection of modern, tech-enabled curtains and blinds.",
+      "catword": "Discover"
+    },
+
+    "stats": {
+      "successfulProjects": "Successful Projects",
+      "yearsInMarket": "Years in market",
+      "partners": "Partners",
+      "citiesSupport": "Cities support"
+    },
+
+    "whyus": {
+      "title": "Why choosing us",
+      "items": [
+        {
+          "title": "Unmatched Quality",
+          "description": "We provide high-quality, innovative curtain and motor solutions that enhance comfort and style in every space."
+        },
+        {
+          "title": "Trusted Expertise",
+          "description": "Our collaboration with leading global brands like Somfy ensures reliability in every product."
+        },
+        {
+          "title": "Tailored Solutions",
+          "description": "We are dedicated to providing efficient solutions that align with your unique requirements, ensuring a perfect fit every time."
+        }
+      ]
+    },
+
+    "zoom": {
+      "title": "Explore Our Range of Premium Blinds",
+      "description": "Choose from a variety of stylish blinds to suit any interior. From roller to zebra blinds, we offer customized solutions to elevate your space.",
+      "buttonText": "Explore More"
+    },
+
+    "aboutPage": {
+      "mainHeading": "About us",
+      "sectionLabel": "ABOUT OUR COMPANY",
+      "title": "Marietta: Elevating Spaces with Advanced Curtain Solutions",
+      "description": "Marietta specializes in advanced curtain solutions, enhancing comfort and elegance in spaces like apartments, offices, showrooms, and hospitals. Partnering with global leaders like Somfy, we provide a diverse range of products to meet client needs and aspirations.",
+      "slogan1": "Advanced and tailored curtain solutions.",
+      "slogan2": "Expertise in diverse spaces (homes, offices, hospitals).",
+      "slogan3": "Partnered with global leaders like Somfy.",
+      "slogan4": "Focus on elegance and comfort..",
+      "slogan5": "Dedicated to meeting diverse client needs."
+    }
+  },
+
+  "blindpage": {
+    "Header": "Discover the best type fit",
+    "keysTitle": "Key Features of",
+    "readymsg": "Ready to Enhance Your Space?",
+    "readySecond": "Discover the full range of Blinds and transform your home or office today.",
+    "contact": "Contact us"
+  },
+
+  "contactPage": {
+    "header": {
+      "title": "Contact Us",
+      "subtitle": "Any question or remarks? Just write us a message!"
+    },
+    "contactInfo": {
+      "title": "Factory Contact Information",
+      "phone": "+966504460636",
+      "phone2": "+966112690455",
+      "email": "support@marietta.sa",
+      "address": "Riyadh, Kingdom of Saudi Arabia",
+      "showroomSection": "Showroom Contact Information",
+      "showroomAddress": "Prince Muhammad Ibn Saad Ibn Abdulaziz Rd, Al Malqa, Riyadh 13525",
+      "showroomAddressMap": "Showroom Location on Google Maps",
+      "showroomWhatsapp": "WhatsApp: +966 11 456 5328",
+      "showroomPhone": "+966559544268",
+      "showroomEmail": "sido@marietta.sa"
+    },
+    "form": {
+      "firstNamePlaceholder": "First Name",
+      "lastNamePlaceholder": "Last Name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone Number",
+      "messagePlaceholder": "Write your message..",
+      "sendButton": "Send Message",
+      "successMessage": "Your message has been sent successfully!",
+      "errorMessage": "Something went wrong. Please try again.",
+      "networkErrorMessage": "Failed to send message. Please check your connection.",
+      "loadingText": "Processing...",
+      "popupTitle": "Thank You!",
+      "popupCloseButton": "Close"
+    }
+  },
+
+  "somfyPage": {
+    "heroSection": {
+      "badge": "Our partner",
+      "titleP1": "Transform Your ",
+      "titleP2": "Space",
+      "titleP3": "With",
+      "titleP4": "Somfy",
+      "subtitle": "Authorized Dealer of Somfy French Motors",
+      "discoverbtn": "Discover more",
+      "description": "Authorized Dealer of Somfy French Motors, Enjoy the silent and smooth operation of your blinds with our WireFree, whisper quiet motors."
+    },
+    "aboutSection": {
+      "title": "Choose the right electric curtains for your project",
+      "content1": "Somfy offers a wide range of motorized solutions to filter sunlight precisely and protect your privacy.",
+      "content2": "The Somfy curtain motor and track can be easily integrated with all types of curtains (traditional, wave or pleat, with or without blackout). The motor is neatly concealed behind the curtain, and rails are available in any length (up to 10 m). They are suitable for left, right, and center opening curtains.",
+      "content3": "To choose the right motor for your smart curtain, we suggest you contact a local Somfy dealer. They can explain the benefits of electric curtains and important considerations like weight, size, and length of the curtain."
+    }
+  },
+
+  "featuresSection": {
+    "title": "Why choose a Somfy motorised smart curtain?",
+    "feature1": {
+      "icon": "/images/feather.png",
+      "title": "Designed for silence",
+      "description": "The opening and closing of your automatic curtains is almost silent and well controlled by the Somfy motor, ensuring long-lasting protection."
+    },
+    "feature2": {
+      "icon": "/images/Touch-motion.png",
+      "title": "Touch motion function",
+      "description": "If you pull the curtains gently, this activates the motor, which then does the rest."
+    },
+    "feature3": {
+      "icon": "/images/Adjustable-speed.png",
+      "title": "Adjustable speed",
+      "description": "Choose a motorised curtain rail from the Glydea series and adjust the speed to meet your exact needs."
+    }
+  },
+
+  "productpage": {
+    "title": "Benefits",
+    "technical": "Technical Characteristics",
+    "attach": "Attachments",
+    "btn": "Download",
+    "other": "Other products"
+  },
+
+  "categoriesSection": {
+    "title1": " American Curtains",
+    "description1": "Explore the modern design",
+    "title2": "Wooden Blinds",
+    "description2": "Discover the new of our decor",
+    "title3": "Fabric collection",
+    "description3": "Elegant Blinds for Any Room",
+    "details": {
+      "curtains": {
+        "title": "Precision-Crafted Curtain Manufacturing",
+        "description": "At Marietta, we specialize in custom curtain manufacturing using advanced tailoring techniques and premium-grade fabrics. Whether for residential, commercial, or hospitality projects, our in-house production ensures unmatched quality, consistency, and attention to detail at every stage."
+      },
+      "fabrics": {
+        "title": "Premium Fabrics for Every Style",
+        "description": "Discover a wide selection of high-quality fabrics sourced from top international mills. Whether you're looking for light sheers, rich velvets, textured linens, or blackout weaves — we offer materials that elevate any space. Perfect for curtains, upholstery, and custom interior projects."
+      },
+      "Wallpapers": {
+        "title": "Stylish Wallpapers to Elevate Your Walls",
+        "description": "Add personality and depth to your space with our exclusive wallpaper collection. From subtle textures to bold prints, our wallpapers are designed to complement your curtains and furniture perfectly. Choose from modern geometrics, classic florals, minimalist patterns, and more — all easy to install and built to last."
+      },
+      "rug": {
+        "title": "Rugs That Ground Your Space in Style",
+        "description": "Discover our curated collection of high-quality rugs designed to bring warmth, texture, and personality to any room. From minimalist neutrals to bold statement pieces, our rugs are crafted for comfort and durability — perfect for living rooms, bedrooms, offices, and more. We offer custom sizing and design options to perfectly fit your space and style preferences."
+      },
+      "furniture": {
+        "title": "Inspired Furniture Designs for Modern Living",
+        "description": "Our furniture designs blend style, function, and comfort to suit every lifestyle. From sleek contemporary lines to timeless classic forms, each piece is thoughtfully created to elevate your living space. Whether you're furnishing a new home or refreshing a single room, our collections help you design with confidence."
+      }
+    }
+  }
+}
