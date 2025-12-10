@@ -62,7 +62,7 @@ export default function Blinds({ params }: PageProps) {
     <div ref={ref} className={inView ? "bb" : "aa"}>
       {blindsInfo ? (
         <div className="overflow-x-hidden">
-          <motion.section
+          <motion.div
             className="relative w-full h-screen bg-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -90,7 +90,7 @@ export default function Blinds({ params }: PageProps) {
                 {blindsInfo.title}
               </motion.h1>
             </motion.div>
-          </motion.section>
+          </motion.div>
 
           <div className="relative bg-slate-100 overflow-hidden py-20">
             <div className="container mx-auto px-6 relative z-10">
